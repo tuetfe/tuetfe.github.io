@@ -5,6 +5,8 @@ _temp/
 _ready/
 .DS_Store
 Thumbs.db
+.idea
+*.sublime*
 *.log
 *.psd
 *.ai

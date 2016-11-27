@@ -1,0 +1,448 @@
+/*===================================================
+
+one-frame
+
+===================================================*/
+
+.one-frame {		
+	width: 100%;
+	height: 100%;
+	overflow: hidden;	
+	background: #ccffcc;
+	position: relative;
+	
+	/* неизменяемые параметры */	
+
+	
+	&__seed {			
+		width: 80px;
+		height: 50px;		
+		background: brown;
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		margin-left: -40px;
+	}
+	
+	&__stalk {
+		width: 50px;
+		position: absolute;
+		bottom: 50px;
+		left: 50%;
+		margin-left: -25px;
+	}
+	
+	&__leaves {
+		position: absolute;
+	}
+	
+	&__embryo,
+	&__burgeon,
+	&__flower,
+	&__fruit {
+		width: 200px;	
+		position: absolute;
+		left: 50%;
+		margin-left: -100px;		
+		
+		@media (min-width: $tablet-width) {
+			width: 250px;
+			height: 250px;
+			margin-left: -125px;
+		}	
+		
+		@media (min-width: $medium-width) {
+			width: 300px;
+			height: 300px;
+			margin-left: -150px;
+		}
+
+	}
+	
+	&__embryo,
+	&__burgeon,
+	&__flower	 {
+		height: 200px;
+		bottom: 50%;
+	}
+	
+	&__embryo {
+		background: darkgreen;
+	}
+	
+	&__burgeon {
+		background: salmon;
+	}
+	
+	&__flower {
+		background: mistyrose;
+	}	
+
+	
+	/* покадрово изменяемые параметры */
+	
+	&--01 {
+		
+		.one-frame__stalk {
+			display: none;
+			opacity: 0;
+		}	
+		
+		.one-frame__leaves {
+			display: none;
+		}
+		
+		.one-frame__embryo,
+		.one-frame__burgeon,
+		.one-frame__flower,
+		.one-frame__fruit {
+			display: none;
+		}
+
+		
+	}
+	
+	&--02 {
+		
+		.one-frame__stalk {
+			display: block;
+			height: 50%;
+			background: green;
+		}	
+		
+		.one-frame__leaves {
+			display: block;
+			width: 50%;			
+			height: 150px;
+			background: green;
+			left: 25%;
+			bottom: 50%;
+			
+			@media (min-width: $tablet-width) {
+				width: 40%;
+				left: 30%;
+			}	
+			
+			@media (min-width: $medium-width) {
+				width: 30%;
+				left: 35%;
+			}
+			
+			@media (min-width: $desktop-width) {
+				width: 20%;
+				left: 40%;
+			}
+		}
+		
+		.one-frame__embryo,
+		.one-frame__burgeon,
+		.one-frame__flower,
+		.one-frame__fruit {
+			display: none;
+		}
+	}
+	
+	&--03 {
+		
+		.one-frame__seed {
+			display: none;
+		}
+		
+		.one-frame__stalk {
+			display: block;
+			height: 50%;
+			background: green;
+		}	
+		
+		.one-frame__leaves {
+			display: block;
+			width: 80%;			
+			height: 250px;
+			background: green;
+			left: 10%;
+			bottom: 50%;
+			
+			@media (min-width: $tablet-width) {
+				width: 70%;
+				left: 15%;
+			}	
+			
+			@media (min-width: $medium-width) {
+				width: 60%;
+				left: 20%;
+			}
+			
+			@media (min-width: $desktop-width) {
+				width: 40%;
+				left: 30%;
+			}
+		}		
+
+		
+		.one-frame__burgeon,
+		.one-frame__flower,
+		.one-frame__fruit {
+			display: none;
+		}
+	}
+	
+	&--04 {
+		
+		.one-frame__seed {
+			display: none;
+		}
+		
+		.one-frame__stalk {
+			display: block;
+			height: 50%;
+			background: green;
+		}
+		
+		.one-frame__leaves {
+			display: block;
+			width: 80%;			
+			height: 250px;
+			background: green;
+			left: 10%;
+			bottom: 50%;
+			
+			@media (min-width: $tablet-width) {
+				width: 70%;
+				left: 15%;
+			}	
+			
+			@media (min-width: $medium-width) {
+				width: 60%;
+				left: 20%;
+			}
+			
+			@media (min-width: $desktop-width) {
+				width: 40%;
+				left: 30%;
+			}
+		}
+		
+		.one-frame__embryo,
+		.one-frame__flower,
+		.one-frame__fruit	{
+			display: none;
+		}		
+	}
+	
+	&--05 {
+		
+		.one-frame__seed {
+			display: none;
+		}
+		
+		.one-frame__stalk {
+			display: block;
+			height: 50%;
+			background: green;
+		}
+		
+		.one-frame__leaves {
+			display: block;
+			width: 80%;			
+			height: 250px;
+			background: green;
+			left: 10%;
+			bottom: 50%;
+			
+			@media (min-width: $tablet-width) {
+				width: 70%;
+				left: 15%;
+			}	
+			
+			@media (min-width: $medium-width) {
+				width: 60%;
+				left: 20%;
+			}
+			
+			@media (min-width: $desktop-width) {
+				width: 40%;
+				left: 30%;
+			}
+		}
+		
+		.one-frame__embryo,
+		.one-frame__burgeon,
+		.one-frame__fruit	{
+			display: none;
+		}
+		
+	}
+	
+		&--06 {
+		
+		.one-frame__seed {
+			display: none;
+		}
+		
+		.one-frame__stalk {
+			display: block;
+			height: 50%;
+			background: green;
+		}
+		
+		.one-frame__leaves {
+			display: block;
+			width: 80%;			
+			height: 250px;
+			background: green;
+			left: 10%;
+			bottom: 50%;
+			
+			@media (min-width: $tablet-width) {
+				width: 70%;
+				left: 15%;
+			}	
+			
+			@media (min-width: $medium-width) {
+				width: 60%;
+				left: 20%;
+			}
+			
+			@media (min-width: $desktop-width) {
+				width: 40%;
+				left: 30%;
+			}
+		}
+		
+		.one-frame__embryo,
+		.one-frame__burgeon,
+		.one-frame__flower	{
+			display: none;
+		}
+			
+		.one-frame__fruit {
+			height: 200px;
+			background: darkred;
+			bottom: 50%;
+			
+			@media (min-width: $tablet-width) {
+				height: 250px;
+			}
+			
+			@media (min-width: $medium-width) {
+				height: 300px;
+			}
+		}
+	}
+	
+	&--07 {
+		
+		.one-frame__seed {
+			display: none;
+		}
+		
+		.one-frame__stalk {
+			display: block;
+			height: 40%;
+			background: olive;
+		}
+		
+		.one-frame__leaves {
+			display: block;
+			width: 60%;	
+			background: olive;
+			height: 200px;
+			left: 20%;
+			bottom: 40%;
+			
+			@media (min-width: $tablet-width) {
+				width: 50%;
+				left: 25%;
+			}	
+			
+			@media (min-width: $medium-width) {
+				width: 40%;
+				left: 30%;
+			}
+			
+			@media (min-width: $desktop-width) {
+				width: 30%;
+				left: 35%;
+			}
+		}	
+		
+		.one-frame__embryo,
+		.one-frame__burgeon,
+		.one-frame__flower	{
+			display: none;
+		}	
+		
+		.one-frame__fruit {
+			height: 200px;
+			background: darkred;
+			bottom: 30px;
+			
+			@media (min-width: $tablet-width) {
+				height: 250px;
+			}
+			
+			@media (min-width: $medium-width) {
+				height: 300px;
+			}
+		}
+	}
+	
+	&--08 {
+		
+		.one-frame__seed {
+			display: block;
+			z-index: 1;
+		}
+		
+		.one-frame__stalk {
+			display: block;
+			height: 10%;
+			background: olive;
+		}
+		
+		.one-frame__leaves {
+			display: block;
+			width: 60%;	
+			background: olive;
+			height: 100px;
+			left: 20%;
+			bottom: 10%;
+			
+			@media (min-width: $tablet-width) {
+				width: 50%;
+				left: 25%;
+			}	
+			
+			@media (min-width: $medium-width) {
+				width: 40%;
+				left: 30%;
+			}
+			
+			@media (min-width: $desktop-width) {
+				width: 30%;
+				left: 35%;
+			}
+		}	
+		
+		.one-frame__embryo,
+		.one-frame__burgeon,
+		.one-frame__flower	{
+			display: none;
+		}	
+		
+		.one-frame__fruit {
+			height: 60px;
+			background: sienna;
+			bottom: 30px;
+			
+			@media (min-width: $tablet-width) {
+				height: 80px;
+			}
+			
+			@media (min-width: $medium-width) {
+				height: 100px;
+			}
+		}
+	}
+}
+

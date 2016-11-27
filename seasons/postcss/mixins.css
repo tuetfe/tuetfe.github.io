@@ -1,0 +1,123 @@
+@define-mixin ul-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@define-mixin fonts $font-size: 15px, $font-weight: 400, $line-height: 1.4, $text-transform: none {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  text-transform: $text-transform;
+}
+
+@define-mixin pseudo-el $pseudo-el-display: block {
+  content: "";
+  display: $pseudo-el-display;
+  box-sizing: border-box;
+}
+
+@define-mixin input-reset {
+  margin: 0;
+  border: 0;
+  text-decoration: none;
+  appearance: none;
+  outline: none;
+	box-shadow: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+
+@define-mixin melt {
+	transition-duration: 0.2s;
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@define-mixin link-melt {
+  transition-duration: 0.2s;
+
+  &[href]:active {
+    opacity: 0.7;
+  }
+
+  @media (min-width: $tablet-width) {
+    &[href]:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@define-mixin no-hover {
+	cursor: default;
+
+	&:active,
+  &[href]:active {
+		opacity: 1;
+	}
+
+  @media (min-width: $tablet-width) {
+
+    &:hover,
+    &[href]:hover {
+      opacity: 1;
+    }
+  }
+}
+
+
+@define-mixin triangle-left $border-triangle: 20px, $triangle-color: $link-color {
+	display: block;
+	width: 0;
+	height: 0;
+	border-right-width: $border-triangle;
+	border-right-style: solid;
+	border-right-color: $triangle-color;
+	border-top: $border-triangle solid transparent;
+	border-bottom: $border-triangle solid transparent;
+	border-left: 0;
+}
+
+@define-mixin triangle-right $border-triangle: 20px, $triangle-color: $link-color {
+	display: block;
+	width: 0;
+	height: 0;
+	border-left-width: $border-triangle;
+	border-left-style: solid;
+	border-left-color: $triangle-color;
+	border-top: $border-triangle solid transparent;
+	border-bottom: $border-triangle solid transparent;
+	border-right: 0;
+}
+
+@define-mixin triangle-top $border-triangle: 20px, $triangle-color: $link-color {
+	display: block;
+	width: 0;
+	height: 0;
+	border-top-width: $border-triangle;
+	border-top-style: solid;
+	border-top-color: $triangle-color;
+	border-left: $border-triangle solid transparent;
+	border-right: $border-triangle solid transparent;
+	border-bottom: 0;
+}
+
+@define-mixin clearfix {
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

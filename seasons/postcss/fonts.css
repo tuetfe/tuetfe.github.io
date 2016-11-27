@@ -1,0 +1,25 @@
+/*==============================
+fonts
+==============================*/
+
+@font-face {
+	font-family: "roboto";
+	src: url("../fonts/roboto-regular-webfont.eot");
+	src: url("../fonts/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/roboto-regular-webfont.woff") format("woff"),
+		url("../fonts/roboto-regular-webfont.ttf") format("truetype"),
+		url("../fonts/roboto-regular-webfont.svg") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "roboto";
+	src: url("../fonts/roboto-bold-webfont.eot");
+	src: url("../fonts/roboto-bold-webfont.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/roboto-bold-webfont.woff") format("woff"),
+		url("../fonts/roboto-bold-webfont.ttf") format("truetype"),
+		url("../fonts/roboto-bold-webfont.svg") format("svg");
+	font-weight: 700;
+	font-style: normal;
+}

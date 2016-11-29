@@ -1,0 +1,16 @@
+node_modules/
+_ready/
+.DS_Store
+Thumbs.db
+.idea
+*.sublime*
+*.log
+*.psd
+*.ai
+*.pdf
+*.eps
+*.doc
+*.docx
+*.tif
+*.psd
+css/*.css

@@ -1,0 +1,21 @@
+{
+  "name": "seasons-vertical-slider",
+  "description": "js test",
+  "main": "index.html",
+  "authors": [
+    "tuetfe"
+  ],
+  "license": "free",
+  "homepage": "https://github.com/tuetfe/tuetfe.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    
+  }
+}

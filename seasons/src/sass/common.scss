@@ -12,8 +12,8 @@ body {
 }
 
 body {
-  font-family: "roboto", Arial, sans-serif;
-  @mixin fonts;	
+  font-family: Arial, sans-serif;
+  @include fonts();	
   color: $base-contrast-color;
 
   @media (min-width: $desktop-width) {

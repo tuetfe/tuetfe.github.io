@@ -1,36 +1,28 @@
 {
-  "name": "seasons",
-  "version": "0.1.0",
-  "private": true,
-  "description": "crazy animation",
-  "author": "tuetfe",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:tuetfe/tuetfe.github.io.git"
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "My First Gulp Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-
+  "author": "cyberSpice",
+  "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
     "browser-sync": "^2.13.0",
-    "css-mqpacker": "^5.0.1",
-    "del": "^2.2.0",
+    "del": "^2.2.1",
     "gulp": "^3.9.1",
-    "gulp-csso": "^2.0.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
     "gulp-imagemin": "^3.0.1",
-    "precss": "^1.4.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^6.1.1",
-    "gulp-rename": "^1.2.2",
     "gulp-svgmin": "^1.2.2",
     "gulp-svgstore": "^6.0.0",
-    "run-sequence": "^1.2.1",
-    "gulp-jade": "^1.0.0"    
-  },
-  "scripts": {
-    "build": "gulp build",
-    "start": "npm run build && gulp serve"
-  },
-  "engines": {
-    "node": "^5.11"
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "imagemin-pngquant": "^5.0.0"
   }
 }

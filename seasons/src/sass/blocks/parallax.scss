@@ -10,6 +10,7 @@ parallax
 	overflow-x: hidden;
   overflow-y: auto;
 	perspective: 1px;
+	background: #717844;
 	
 	&__group {
     position: relative;    
@@ -34,13 +35,13 @@ parallax
 		&--back {   
 			transform: translateZ(-1px) scale(2);
 			border: 1px solid green;
-			color: green;
+			color: green;			
 		}
 		
 		&--deep {
 			transform: translateZ(-2px) scale(3);
 			border: 1px solid blue;
-			color: blue;
+			color: blue;			
 		}		
   }	
 }

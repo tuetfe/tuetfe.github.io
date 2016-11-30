@@ -10,13 +10,56 @@ parallax
 	overflow-x: hidden;
   overflow-y: auto;
 	perspective: 1px;
-	background: #717844;
+	background-color: #717844;
+	background-image: url("../img/texture.jpg");		
 	
 	&__group {
     position: relative;    
     height: 100vh;    
     transform-style: preserve-3d;
-		border: #000;		
+		border: #000;	
+		
+		&--01 {
+			
+			.parallax__layer--base {
+				background-image: linear-gradient(to bottom, #d6ebf2, #a1bc8e);
+			}	
+			
+			.parallax__layer--back {
+				border: 1px solid brown;
+			}
+
+		}
+		
+		&--02 {
+			
+			.parallax__layer--base {
+				background-image: linear-gradient(to bottom, #a1bc8e, #e9dd51);
+			}
+			
+			.parallax__layer--back {
+				border: 1px solid green;
+			}
+		}
+		
+		&--03 {
+			
+			.parallax__layer--base {
+				background-image: linear-gradient(to bottom, #e9dd51, #cc8845);
+			}	
+			
+			.parallax__layer--back {
+				border: 1px solid red;
+			}
+
+		}
+		
+		&--04 {
+			
+			.parallax__layer--base {
+				background-image: linear-gradient(to bottom, #cc8845, #d6ebf2);
+			}
+		}
   }
 	
 	&__layer {
@@ -27,21 +70,55 @@ parallax
     bottom: 0;
 		
 		&--base {    
-			transform: translateZ(0);	
-			border: 1px solid red;
-			color: red;
+			transform: translateZ(0);				
+			opacity: 0.5;	
   	}
 		
 		&--back {   
-			transform: translateZ(-1px) scale(2);
-			border: 1px solid green;
-			color: green;			
+			transform: translateZ(-1px) scale(2);	
+			
 		}
 		
 		&--deep {
-			transform: translateZ(-2px) scale(3);
-			border: 1px solid blue;
-			color: blue;			
-		}		
+			transform: translateZ(-2px) scale(3);	
+			border: 1px solid yellow;
+			
+			&::after {
+					@include pseudo-el;
+					width: 300px;
+					height: 300px;					
+					border-radius: 50%;	
+					animation-name: sheen;
+					animation-duration:	10s;
+					animation-iteration-count: infinite;
+					animation-direction: alternate;
+					position: absolute;
+					left: 10%;
+					top: 0;					
+				}
+		}	
+		
+		&--deepest {
+			transform: translateZ(-4px) scale(4);	
+			border: 1px solid yellow;
+		}	
+		
+
+		
+		&--deeper {
+			transform: translateZ(-3px) scale(4);
+				border: 1px solid blue;				
+
+			}
   }	
+}
+
+@keyframes sheen {
+	0% {
+		background-color: rgba(255, 255, 255, 0.5);		
+	}
+  100% {
+    background-color: rgba(255, 204, 0, 0.5);		
+  }
+
 }
